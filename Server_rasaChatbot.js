@@ -11,7 +11,7 @@ const server = http.createServer(app);
 const io = require('socket.io')(server, {
     cors: {
         //http://localhost:5174 : 리액트(UI) url 
-         origin: ["http://localhost:5173"], // 허용할 출처 목록
+         origin: ["https://localhost:5173"], // 허용할 출처 목록
         methods: ["GET", "POST"],
         allowedHeaders: ["my-custom-header"],
         credentials: true

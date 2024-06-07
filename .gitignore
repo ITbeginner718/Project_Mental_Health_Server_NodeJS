@@ -145,3 +145,8 @@ dist
 
 ## 유튜브 API 키##
 webCrawlingApiKey.js
+
+#fcm admin-sdk 비공개 키 
+project-mentalcare-firebase-adminsdk-afk11-a85b080173.json
+
+backup_Server_fcm_cloudMessaging.js

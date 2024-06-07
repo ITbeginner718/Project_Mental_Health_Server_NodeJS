@@ -1,0 +1,7 @@
+fcm 알림 서버 구현하기
+
+터미널 설치 
+npm install firebase-admin
+
+파이어베이스 비공개 키 생성
+https://yusang.tistory.com/79

@@ -1,6 +1,4 @@
-// import YOUTUBE_API_KEY from './webCrawlingApiKey.js';
-
-const YOUTUBE_API_KEY = require('./webCrawlingApiKey.js');
+import YOUTUBE_API_KEY from './webCrawlingApiKey.js';
 
 // 환경 변수 설정
 process.env.YOUTUBE_API_KEY = YOUTUBE_API_KEY;
@@ -20,7 +18,7 @@ const server = http.createServer(app);
 const io = require('socket.io')(server, {
     cors: {
         //http://localhost:5174 : 리액트(UI) url 
-        origin: ["https://localhost:5173"], // 허용할 출처 목록
+        origin: ["http://localhost:5173"], // 허용할 출처 목록
         methods: ["GET", "POST"],
         allowedHeaders: ["my-custom-header"],
         credentials: true
@@ -45,6 +43,8 @@ io.on('connection', (socket) => {
             //     .catch(
             //         error => console.error(error)
             //     );
+
+
 
             try {
                 const data = await getYoutubeDatas(msg);
@@ -105,8 +105,5 @@ const getSearchedVideos = async (youtubeDatas) => {
         const title = element.snippet.title;
         searchedVideos.push({ videoId, title });
     });
-
-    console.log(videoLists);
-    
     return searchedVideos;
 }
